@@ -4,8 +4,29 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container dashboard">
     <h2>Simon's Shop</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Weather
+                </div>
+                <div class="card-body">
+                    <p>Hello today is: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+                    @{
+                        var currTemperature = 20;
+                    }
+                    <p>The temperature outside is: @currTemperature degrees</p>
+                    @if (currTemperature > 30) {
+                        <p>Its warm outside, take sunscreen! @currTemperature</p>
+                    } else {
+                        <p>Its ok outside</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
