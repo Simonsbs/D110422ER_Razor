@@ -10,7 +10,7 @@ namespace MyShop.Pages {
         }
 
         public void OnGet() {
-
+            _logger.LogWarning("Entered OnGet Method");
         }
     }
 }
