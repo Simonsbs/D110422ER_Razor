@@ -24,8 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Lessons/Hacker-U/D110422ER_Razor/MyShop/MyShop/Pages/NewPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Lessons/Hacker-U/D110422ER_Razor/MyShop/MyShop/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Lessons/Hacker-U/D110422ER_Razor/MyShop/MyShop/Pages/Products/ShowAllProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcU2hvd0FsbFByb2R1Y3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Lessons/Hacker-U/D110422ER_Razor/MyShop/MyShop/Pages/Shared/_ValidationScriptsPartial.cshtml]
