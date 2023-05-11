@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Lessons\\Hacker-U\\D110422ER_Razor\\MyShop\\MyShop\\wwwroot\\images\\img1.jpg",
+      "PackagePath": "staticwebassets\\images\\img1.jpg"
+    },
+    {
       "Id": "D:\\Lessons\\Hacker-U\\D110422ER_Razor\\MyShop\\MyShop\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
