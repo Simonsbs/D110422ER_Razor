@@ -14,7 +14,12 @@
                     Weather
                 </div>
                 <div class="card-body">
+                    <!--A COMMENT-->
+                    
                     <p>Hello today is: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+                    
+                    @* <p>Dont display this line to client: @DateTime.Now.ToString("dd/MM/yyyy")</p> *@
+
                     @{
                         var currTemperature = 20;
                     }
