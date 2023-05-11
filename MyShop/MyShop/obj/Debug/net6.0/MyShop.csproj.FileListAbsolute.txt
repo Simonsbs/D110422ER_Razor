@@ -29,3 +29,4 @@ D:\Lessons\Hacker-U\D110422ER_Razor\MyShop\MyShop\obj\Debug\net6.0\refint\MyShop
 D:\Lessons\Hacker-U\D110422ER_Razor\MyShop\MyShop\obj\Debug\net6.0\MyShop.pdb
 D:\Lessons\Hacker-U\D110422ER_Razor\MyShop\MyShop\obj\Debug\net6.0\MyShop.genruntimeconfig.cache
 D:\Lessons\Hacker-U\D110422ER_Razor\MyShop\MyShop\obj\Debug\net6.0\ref\MyShop.dll
+D:\Lessons\Hacker-U\D110422ER_Razor\MyShop\MyShop\bin\Debug\net6.0\appsettings.Production.json
