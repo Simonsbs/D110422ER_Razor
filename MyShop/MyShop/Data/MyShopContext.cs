@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyShop.Data.Models;
+using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace MyShop.Data {
     public class MyShopContext : DbContext {
@@ -9,6 +12,11 @@ namespace MyShop.Data {
         DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            
+            // TODO: Simon: fix path!!!
+            //string data = File.ReadAllText("Data/SeedData.json");
+            //JsonSerializer.Deserialize<Product>(data);
+
             modelBuilder.Entity<Product>().HasData(
                 new Product {
                     ID = 1,
