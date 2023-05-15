@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MyShop.Pages
+namespace MyShop.Pages.Products
 {
-    public class NewPageModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {

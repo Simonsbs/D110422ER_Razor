@@ -11,6 +11,10 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     </environment>
     
+    @if (IsSectionDefined("HeaderSection")) {
+        @RenderSection("HeaderSection")
+    }
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyShop.styles.css" asp-append-version="true" />
 </head>
@@ -45,12 +49,12 @@
             @RenderBody()
         </main>
     </div>
-    <environment names="Production">
+    @*<environment names="Production">
         <p>Now in Production</p>
     </environment>
     <environment names="Development">
         <p>Now in Development</p>
-    </environment>
+    </environment>*@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - MyShop - <a asp-area="" asp-page="/Privacy">Privacy</a>
