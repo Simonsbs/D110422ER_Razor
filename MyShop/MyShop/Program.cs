@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using MyShop.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<MyShopContext>();
+builder.Services.AddDbContext<MyShopContext>(o => {
+    o.UseSqlServer(builder.Configuration.GetConnectionString("MyShopCS"));
+});
 
 var app = builder.Build();
 
