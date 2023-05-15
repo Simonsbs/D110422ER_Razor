@@ -19,8 +19,8 @@ namespace MyShop.Data.Models {
 
         [Required]
         public double Price { get; set; }
-        
+
         [NotMapped]
-        public string ImageFile { get; set; }
+        public string ImageFile { get; set; } = "";
     }
 }
