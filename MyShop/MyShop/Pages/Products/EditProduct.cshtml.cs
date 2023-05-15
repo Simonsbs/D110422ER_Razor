@@ -3,12 +3,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MyShop.Pages.Products {
     public class EditProductModel : PageModel {
-        //[FromRoute]
-        //public int Id {
-        //    get;set;
-        //}
+        [FromRoute]
+        public int Id {
+            get; set;
+        }
 
         public void OnGet() {
+
+        }
+
+        public void OnPost() {
 
         }
     }
