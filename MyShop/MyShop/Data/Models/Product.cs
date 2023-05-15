@@ -12,6 +12,11 @@ namespace MyShop.Data.Models {
         [Required]
         [MaxLength(500)]
         public string Description { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public string Category { get; set; }
+
         [Required]
         public double Price { get; set; }
         
