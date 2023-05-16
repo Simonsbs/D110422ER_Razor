@@ -14,25 +14,27 @@ namespace MyShop.Data {
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             
             // TODO: Simon: fix path!!!
-            //string data = File.ReadAllText("Data/SeedData.json");
-            //JsonSerializer.Deserialize<Product>(data);
+            string rawJson = File.ReadAllText(@"Data\SeedData.json");
+            var data = JsonSerializer.Deserialize<List<Product>>(rawJson);
+            modelBuilder.Entity<Product>().HasData(data);
 
-            modelBuilder.Entity<Product>().HasData(
-                new Product {
-                    ID = 1,
-                    Name = "Product 1",
-                    Description = "Description 1",
-                    Price = 10.0,
-                    Category = "Cat1"
-                },
-                new Product {
-                    ID = 2,
-                    Name = "Product 2",
-                    Description = "Description 2",
-                    Price = 20.0,
-                    Category = "Cat2"
-                }
-            );
+
+            //modelBuilder.Entity<Product>().HasData(
+            //    new Product {
+            //        ID = 1,
+            //        Name = "Product 1",
+            //        Description = "Description 1",
+            //        Price = 10.0,
+            //        Category = "Cat1"
+            //    },
+            //    new Product {
+            //        ID = 2,
+            //        Name = "Product 2",
+            //        Description = "Description 2",
+            //        Price = 20.0,
+            //        Category = "Cat2"
+            //    }
+            //);
         }
     }
 }
