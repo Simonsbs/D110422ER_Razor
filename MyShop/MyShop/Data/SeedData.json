@@ -1,0 +1,72 @@
+[
+  {
+    "ID": 1,
+    "Name": "Product 1",
+    "Description": "This is the description for Product 1",
+    "Price": 10.99,
+    "Category": "Category 1"
+  },
+  {
+    "ID": 2,
+    "Name": "Product 2",
+    "Description": "This is the description for Product 2",
+    "Price": 19.99,
+    "Category": "Category 2"
+  },
+  {
+    "ID": 3,
+    "Name": "Product 3",
+    "Description": "This is the description for Product 3",
+    "Price": 5.99,
+    "Category": "Category 1"
+  },
+  {
+    "ID": 4,
+    "Name": "Product 4",
+    "Description": "This is the description for Product 4",
+    "Price": 15.99,
+    "Category": "Category 3"
+  },
+  {
+    "ID": 5,
+    "Name": "Product 5",
+    "Description": "This is the description for Product 5",
+    "Price": 12.49,
+    "Category": "Category 2"
+  },
+  {
+    "ID": 6,
+    "Name": "Product 6",
+    "Description": "This is the description for Product 6",
+    "Price": 9.99,
+    "Category": "Category 1"
+  },
+  {
+    "ID": 7,
+    "Name": "Product 7",
+    "Description": "This is the description for Product 7",
+    "Price": 7.99,
+    "Category": "Category 3"
+  },
+  {
+    "ID": 8,
+    "Name": "Product 8",
+    "Description": "This is the description for Product 8",
+    "Price": 14.99,
+    "Category": "Category 2"
+  },
+  {
+    "ID": 9,
+    "Name": "Product 9",
+    "Description": "This is the description for Product 9",
+    "Price": 11.99,
+    "Category": "Category 1"
+  },
+  {
+    "ID": 10,
+    "Name": "Product 10",
+    "Description": "This is the description for Product 10",
+    "Price": 8.99,
+    "Category": "Category 3"
+  }
+]

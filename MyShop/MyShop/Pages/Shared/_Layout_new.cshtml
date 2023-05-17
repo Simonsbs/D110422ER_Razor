@@ -10,10 +10,6 @@
     <environment names="Production">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     </environment>
-    
-    @if (IsSectionDefined("HeaderSection")) {
-        @RenderSection("HeaderSection")
-    }
 
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyShop.styles.css" asp-append-version="true" />
@@ -38,9 +34,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-page="/Products/ShowAllProducts">Products</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-page="/Products/AddProduct">Add Product</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -48,16 +41,16 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <h1>MY SITE!</h1>
+            <h1>MY NEW SITE!</h1>
             @RenderBody()
         </main>
     </div>
-    @*<environment names="Production">
+    <environment names="Production">
         <p>Now in Production</p>
     </environment>
     <environment names="Development">
         <p>Now in Development</p>
-    </environment>*@
+    </environment>
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - MyShop - <a asp-area="" asp-page="/Privacy">Privacy</a>
@@ -76,8 +69,8 @@
     <environment names="Production">
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </environment>
-    
-    
+
+
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
