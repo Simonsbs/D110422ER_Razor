@@ -10,6 +10,8 @@ builder.Services.AddDbContext<MyShopContext>(o => {
     o.UseSqlServer(builder.Configuration.GetConnectionString("MyShopCS"));
 });
 
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
