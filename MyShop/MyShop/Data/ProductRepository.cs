@@ -1,4 +1,5 @@
-﻿using MyShop.Data.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using MyShop.Data.Models;
 
 namespace MyShop.Data {
     public class ProductRepository : IProductRepository {
@@ -22,11 +23,12 @@ namespace MyShop.Data {
         }
 
         public Product GetById(int id) {
-            throw new NotImplementedException();
+            return _context.Products.FirstOrDefault(p => p.ID == id);
         }
 
         public void Update(Product product) {
-            throw new NotImplementedException();
+            _context.Entry(product).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }
