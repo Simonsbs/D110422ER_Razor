@@ -18,7 +18,7 @@ namespace MyShop.Data {
         }
 
         public List<Product> GetAll() {
-            throw new NotImplementedException();
+            return _context.Products.ToList();
         }
 
         public Product GetById(int id) {
