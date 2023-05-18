@@ -16,6 +16,9 @@ namespace MyShop.Data {
 
         public void Delete(int id) {
             var product = GetById(id);
+            if (product == null) {
+                throw new NullReferenceException("No user found with id: " + id);
+            }
             _context.Products.Remove(product);
             _context.SaveChanges();
         }
