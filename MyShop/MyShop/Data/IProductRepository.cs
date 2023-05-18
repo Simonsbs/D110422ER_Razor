@@ -6,7 +6,7 @@ namespace MyShop.Data {
         public Product GetById(int id);
         public List<Product> GetAll();
         public void Update(Product product);
-        public void Delete(Product product);
+        public void Delete(int id);
         
     }
 }

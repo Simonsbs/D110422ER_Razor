@@ -14,8 +14,10 @@ namespace MyShop.Data {
             _context.SaveChanges();
         }
 
-        public void Delete(Product product) {
-            throw new NotImplementedException();
+        public void Delete(int id) {
+            var product = GetById(id);
+            _context.Products.Remove(product);
+            _context.SaveChanges();
         }
 
         public List<Product> GetAll() {

@@ -27,7 +27,13 @@ namespace MyShop.Pages.Products {
             EditProduct = _repo.GetById(Id);
         }
 
-        public async Task<IActionResult> OnPost() {
+        public IActionResult OnPostDelete() {
+            _repo.Delete(Id);
+
+            return RedirectToPage("ShowAllProducts");
+        }
+        
+        public async Task<IActionResult> OnPostEdit() {
             if (!ModelState.IsValid) {
                 return Page();
             }

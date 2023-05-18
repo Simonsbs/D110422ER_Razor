@@ -37,7 +37,8 @@
                 <label asp-for="EditProduct.Image">Image:</label>
                 <input asp-for="EditProduct.Image" class="form-control" />
             </div>
-            <button class="btn btn-success">Save</button>
+            <button asp-page-handler="edit" class="btn btn-success">Save</button>
+            <button asp-page-handler="delete" class="btn btn-danger float-end">Delete</button>
         </form>
     </div>
 </div>
