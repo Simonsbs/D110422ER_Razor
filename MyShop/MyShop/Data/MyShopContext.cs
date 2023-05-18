@@ -9,7 +9,7 @@ namespace MyShop.Data {
         public MyShopContext(DbContextOptions options) : base(options) {
         }
 
-        DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             

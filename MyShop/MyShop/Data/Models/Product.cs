@@ -7,17 +7,22 @@ namespace MyShop.Data.Models {
         public int ID { get; set; }
 
         [Required]
+        [MinLength(5)]
         [MaxLength(100)]
         public string Name { get; set; }
+        
         [Required]
+        [MinLength(10)]
         [MaxLength(500)]
         public string Description { get; set; }
 
         [Required]
+        [MinLength(5)]
         [MaxLength(100)]
         public string Category { get; set; }
 
         [Required]
+        [Range(0, 999.0)]
         public double Price { get; set; }
 
         [NotMapped]
