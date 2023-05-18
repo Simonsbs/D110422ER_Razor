@@ -23,8 +23,13 @@ namespace MyShop.Pages.Products {
             get; set;
         }
 
-        public void OnGet() {
+        public IActionResult OnGet() {
             EditProduct = _repo.GetById(Id);
+            if (EditProduct == null) {
+                return RedirectToPage("ShowAllProducts");
+            }
+
+            return Page();
         }
 
         public IActionResult OnPostDelete() {
