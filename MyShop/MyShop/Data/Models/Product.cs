@@ -25,7 +25,9 @@ namespace MyShop.Data.Models {
         [Range(0, 999.0)]
         public double Price { get; set; }
 
+        public string ImagePath { get; set; } = "";
+
         [NotMapped]
-        public string ImageFile { get; set; } = "";
+        public IFormFile Image { get; set; }
     }
 }
