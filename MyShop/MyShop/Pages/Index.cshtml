@@ -15,9 +15,9 @@
                 </div>
                 <div class="card-body">
                     <!--A COMMENT-->
-                    
+
                     <p>Hello today is: @DateTime.Now.ToString("dd/MM/yyyy")</p>
-                    
+
                     @* <p>Dont display this line to client: @DateTime.Now.ToString("dd/MM/yyyy")</p> *@
 
                     @*@Html.ActionLink("Create", "Product")*@
@@ -33,6 +33,15 @@
                     } else {
                         <p>Its ok outside</p>
                     }
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    Some Products
+                </div>
+                <div class="card-body">
+                    <h5>Some Great products:</h5>
+                    @await Component.InvokeAsync("ProductList")
                 </div>
             </div>
         </div>
