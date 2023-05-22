@@ -1,0 +1,43 @@
+﻿@using MyShop.Data.Models;
+@model Product
+
+<form method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label asp-for="@Model.Name">Name:</label>
+        <input asp-for="@Model.Name" class="form-control" />
+        <span asp-validation-for="@Model.Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Description">Description:</label>
+        <input asp-for="@Model.Description" class="form-control" />
+        <span asp-validation-for="@Model.Description"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Price">Price:</label>
+        <input asp-for="@Model.Price" class="form-control" />
+        <span asp-validation-for="@Model.Price"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Category">Category:</label>
+        <input asp-for="@Model.Category" class="form-control" />
+        <span asp-validation-for="@Model.Category"></span>
+    </div>
+    @if (ViewContext.RouteData.Values["id"] is not null) { // In Edit mode
+        <div class="mb-3">
+            <label asp-for="@Model.ImagePath">Image:</label>
+            <input type="hidden" asp-for="@Model.ImagePath" class="form-control" />
+            <img src="~/images/uploads/@Model.ImagePath" width="50" />
+        </div>
+    }
+    <div class="mb-3">
+        <label asp-for="@Model.Image">Image:</label>
+        <input asp-for="@Model.Image" class="form-control" />
+    </div>
+    @if (ViewContext.RouteData.Values["id"] is null) { // Not in Edit mode
+        <button class="btn btn-success">Add</button>
+    } else { // In edit mode
+        <button asp-page-handler="edit" class="btn btn-success">Save</button>
+        <button asp-page-handler="delete" class="btn btn-danger float-end">Delete</button>
+    }
+</form>

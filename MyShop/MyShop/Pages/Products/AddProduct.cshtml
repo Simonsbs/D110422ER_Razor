@@ -5,34 +5,7 @@
 <h2>Add new product</h2>
 <div class="row">
     <div class="col-md-6">
-        <form method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="All"></div>
-            <div class="mb-3">
-                <label asp-for="NewProduct.Name">Name:</label>
-                <input asp-for="NewProduct.Name" class="form-control" />
-                <span asp-validation-for="NewProduct.Name"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="NewProduct.Description">Description:</label>
-                <input asp-for="NewProduct.Description" class="form-control" />
-                <span asp-validation-for="NewProduct.Description"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="NewProduct.Price">Price:</label>
-                <input asp-for="NewProduct.Price" class="form-control" />
-                <span asp-validation-for="NewProduct.Price"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="NewProduct.Category">Category:</label>
-                <input asp-for="NewProduct.Category" class="form-control" />
-                <span asp-validation-for="NewProduct.Category"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="NewProduct.Image">Image:</label>
-                <input asp-for="NewProduct.Image" class="form-control" />
-            </div>
-            <button class="btn btn-success" >Add</button>
-        </form>
+        <partial name="ProductForm" model="@Model.NewProduct" />
     </div>
     <div class="col-md-6">
         <partial name="HelpWidget" />
