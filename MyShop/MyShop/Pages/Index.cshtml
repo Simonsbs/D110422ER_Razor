@@ -41,7 +41,8 @@
                 </div>
                 <div class="card-body">
                     <h5>Some Great products:</h5>
-                    @await Component.InvokeAsync("ProductList")
+                    @*@await Component.InvokeAsync("ProductList", new {Amount = 3})*@
+                    <vc:product-list amount="2" />
                 </div>
             </div>
         </div>

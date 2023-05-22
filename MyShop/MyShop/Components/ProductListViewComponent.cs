@@ -10,8 +10,12 @@ namespace MyShop.Components {
             _repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
-        public IViewComponentResult Invoke() {
+        public IViewComponentResult Invoke(int amount) {
             List<Product> items = _repo.GetAll();
+            if (amount > 0) {
+                items = items.Take(amount).ToList();
+            }
+
             return View(items);
         }
     }
