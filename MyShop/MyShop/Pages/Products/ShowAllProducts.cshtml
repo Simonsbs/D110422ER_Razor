@@ -1,5 +1,38 @@
-﻿@page
+﻿@page "/products/all"
 @model MyShop.Pages.Products.ShowAllProductsModel
 @{
 }
 <h1>Show all products page</h1>
+<hr />
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Image</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Category</td>
+            <td>Edit</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products) {
+            <tr>
+                <td>@product.ID</td>
+                <td><img src="~/images/uploads/@product.ImagePath" width="50" /></td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>@product.Category</td>
+                <td>
+                    <a asp-page="EditProduct" asp-route-id="@product.ID">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section MyFooterSection {
+    bla
+}

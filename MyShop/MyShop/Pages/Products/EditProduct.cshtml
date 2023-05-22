@@ -1,0 +1,44 @@
+﻿@page "/products/edit/{id:int}"
+@model MyShop.Pages.Products.EditProductModel
+@{
+}
+<h2>Edit product product #@Model.Id</h2>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="EditProduct.Name">Name:</label>
+                <input asp-for="EditProduct.Name" class="form-control" />
+                <span asp-validation-for="EditProduct.Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EditProduct.Description">Description:</label>
+                <input asp-for="EditProduct.Description" class="form-control" />
+                <span asp-validation-for="EditProduct.Description"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EditProduct.Price">Price:</label>
+                <input asp-for="EditProduct.Price" class="form-control" />
+                <span asp-validation-for="EditProduct.Price"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EditProduct.Category">Category:</label>
+                <input asp-for="EditProduct.Category" class="form-control" />
+                <span asp-validation-for="EditProduct.Category"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EditProduct.ImagePath">Image:</label>
+                <input type="hidden" asp-for="EditProduct.ImagePath" class="form-control" />
+                <img src="~/images/uploads/@Model.EditProduct.ImagePath" width="50" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="EditProduct.Image">Image:</label>
+                <input asp-for="EditProduct.Image" class="form-control" />
+            </div>
+            <button asp-page-handler="edit" class="btn btn-success">Save</button>
+            <button asp-page-handler="delete" class="btn btn-danger float-end">Delete</button>
+        </form>
+    </div>
+</div>
