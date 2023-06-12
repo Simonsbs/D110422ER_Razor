@@ -47,3 +47,10 @@ app.UseCors("Open");
 app.MapRazorPages();
 
 app.Run();
+
+
+async Task MakeSureDBCreated(IServiceProvider service){
+    using (var db = service.CreateScope().ServiceProvider.GetRequiredService<MyShopContext>()) {
+        await db.Database.MigrateAsync();
+    }
+}
