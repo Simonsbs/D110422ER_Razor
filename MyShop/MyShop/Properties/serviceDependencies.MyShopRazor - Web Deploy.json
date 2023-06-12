@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/MyShopRazor/providers/Microsoft.ServiceLinker/linkers/MyShopCS_261BF2965F",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/myshopdbserversimon2023/databases/MyShop_db",
+      "type": "mssql.azure",
+      "connectionId": "MyShopCS"
+    }
+  }
+}
