@@ -12,7 +12,18 @@ builder.Services.AddDbContext<MyShopContext>(o => {
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+builder.Services.AddHttpClient();
+
+builder.Services.AddCors(options => {
+    options.AddPolicy("Open", builder => builder.
+                                            AllowAnyOrigin().
+                                            AllowAnyHeader().
+                                            AllowAnyMethod());
+});
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
@@ -30,6 +41,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseCors("Open");
 
 app.MapRazorPages();
 

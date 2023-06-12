@@ -61,6 +61,22 @@
         </div>
         <div class="col-md-6">
             <partial name="HelpWidget" />
+            <div class="card">
+                <div class="card-header">
+                    My Github data
+                </div>
+                <div class="card-body">
+                    <h5>My Github data:</h5>
+                    <table class="table table-bordered">
+                        @foreach (var kv in Model.GitHubData) {
+                            <tr>
+                                <td>@kv.Key</td>
+                                <td>@kv.Value</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
