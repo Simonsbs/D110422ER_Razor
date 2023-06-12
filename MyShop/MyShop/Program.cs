@@ -23,7 +23,7 @@ builder.Services.AddCors(options => {
 
 var app = builder.Build();
 
-
+await MakeSureDBCreated(app.Services);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
